@@ -1,0 +1,16 @@
+1. To Create - 
+kubectl create -f deployment-definition.yaml
+
+2. Get -
+kubectl get deployments
+
+3. Update -
+kubectl apply -f deployment-definition.yaml
+kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1
+
+4. Status -
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/myapp-deployment
+
+5. Rollback - 
+kubectl rollout undo deployment/myapp-deployments
